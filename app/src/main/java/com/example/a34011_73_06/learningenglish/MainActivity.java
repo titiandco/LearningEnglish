@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         newWord = (Button)findViewById(R.id.new_element);
         allFrEng = (Button)findViewById(R.id.elements2);
 
-
+        /** Ecouteur pour envoi sur la page d'affichage par ordre alphabètique des mots anglais */
         allEngFr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        /** Ecouteur pour envoi sur la page de saisie d'une nouvelle traduction */
         newWord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /** Ecouteur pour envoi sur la page d'affichage par ordre alphabètique des mots français */
         allFrEng.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

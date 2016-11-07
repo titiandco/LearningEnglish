@@ -41,6 +41,7 @@ public class ElementsActivity extends ListActivity {
         data = new ContactWord(this);
         data.open();
 
+        /** Appel à la base de données pour constituer la liste à l'écran */
         values = data.getAll();
         ArrayAdapter<ContactWord> adapter = new ArrayAdapter<ContactWord>(this, android.R.layout.simple_expandable_list_item_1, values);
         setListAdapter(adapter);
@@ -72,10 +73,10 @@ public class ElementsActivity extends ListActivity {
     }
     @Override
     public void onResume()
-    {  // After a pause OR at startup
+    {
         super.onResume();
-        //Refresh your stuff here
 
+        /** Actualisation de la liste aprés la modification ou la suppression d'un élément */
         values = data.getAll();
         ArrayAdapter<ContactWord> adapter = new ArrayAdapter<ContactWord>(this, android.R.layout.simple_expandable_list_item_1,values);
         setListAdapter(adapter);
