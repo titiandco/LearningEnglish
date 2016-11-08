@@ -49,7 +49,7 @@ public class EditActivity extends AppCompatActivity {
                 }
             }
         });
-
+        //  mise en ecoute du bouton 'retour'
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
