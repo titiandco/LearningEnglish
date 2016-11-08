@@ -15,6 +15,8 @@ public class EditActivity extends AppCompatActivity {
     Button back,upd_el,del_btn;
     EditText nameenglish,namefrench,exampleenglish,examplefrench;
     long id;
+
+    /** Modification ou suppression d'un élément existant */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +51,9 @@ public class EditActivity extends AppCompatActivity {
                 }
             }
         });
+
         //  mise en ecoute du bouton 'retour'
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
